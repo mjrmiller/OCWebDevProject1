@@ -1,0 +1,257 @@
+/* color scheme: white #ffffff cream #faffd8 old rose #c16e70 red #8c2f39 med blue #151e3f dkblue #030027 */
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #8c2f39;
+}
+.popup {
+    visibility: hidden;
+}
+li {
+    list-style: none;
+    text-decoration: none;
+}
+.nav *{
+    color: #faffd8;
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+    font-variant: petite-caps;
+    transition: .5s;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+.nav a[href] {
+    padding: 5px;
+}
+.nav a[href]:hover {
+    background-color: #c16e70;
+    color: #151e3f;
+}
+.content {
+    align-items: center;
+}
+#headerDiv {
+    background-image: url(./binary-code-minimalism-abstract-t1-1600x900.jpeg);
+    background-size: cover;
+    mix-blend-mode: overlay;
+    padding: 30 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+   
+}
+header h1 {
+    background-color: rgba(42, 87, 89, 0.707);
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 10;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    gap: 20px;
+  
+}
+.container div {
+    border: 1px solid #030027;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #faffd8;
+    padding: 2px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 25rem;
+    aspect-ratio: 1;
+}
+.container h2 {
+    color: #8c2f39 ;
+    writing-mode: vertical-lr;
+    font-size: 30px;
+    transform: rotate(180deg);
+    padding: 0 20px 0 ;
+}
+.container ul {
+    display: flex;
+    padding: 0 20px 0;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.container li {
+    border: 1px solid #8c2f39;
+    background-color: #c16e70;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+.container li:hover {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.container a[href] {
+    text-decoration: none;
+    color: #030027;
+
+}
+.container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+#returnPopup {
+    visibility: hidden;
+}
+
+
+
+
+
+
+/* reg laptop */
+@media  screen and (min-width: 800px) {
+    .popup {
+        visibility: visible;
+        z-index: 1;
+        display: flex;
+        border-radius: 20px;
+        align-items: center;
+        background-color: #faffd8;
+        font-size: 20px;
+        padding: 50px;
+        border: 1px solid #030027;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 30%;
+        flex-flow: column wrap;
+        gap: 10px;
+        box-shadow: 4px 8px 16px 8px rgba(0, 0, 0, 0.4);
+    }
+    button {
+        background-color:#c16e70;
+        color:#030027;
+        border-radius: 8px;
+        padding: 3px;
+        aspect-ratio: 3;
+    }
+    .popup button:hover {
+        background-color: #faffd8;
+        color: #8c2f39;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    #headerDiv {
+        padding: 40 0;
+    }
+    #misc-tools {
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .nav {
+        visibility: hidden;
+    }
+    .content {
+        margin: 30px;
+        padding: 15px;
+        border-radius: 20px;
+        background-color: #c16e6f7e;
+        align-items: center;
+    }
+    #design {
+        padding: 20px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+    #headerDiv {
+        margin: 10px 25px;
+        border-radius: 20px;
+    }
+    header h1 {
+        border-bottom: 1px solid #faffd8;
+        border-top: 1px solid #faffd8;
+    }
+    .container {
+        margin: 20px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #faffd87c;
+        justify-content: space-around;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 30px;
+    }
+    .container div {
+        border-radius: 15px;
+    }
+    .container div:last-child {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50rem;
+        aspect-ratio: 4;
+    }
+    #returnPopup {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        gap: 6rem;
+        visibility: visible;
+        background-color: #c06d6e87;
+        border-radius: 10px;
+    }
+}
+/* imac */
+@media  screen and (min-width: 1620px) {
+    .container h2 {
+        padding: 20px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+    .container {
+        border: 1px solid yellowgreen;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: space-around;
+
+    }
+    .container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .container ul {
+        flex-flow: row wrap;
+        align-items: space-around;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .container div:last-child {
+        border-radius: 20px;
+        padding: 2px 16px;
+        width: 25rem;
+        aspect-ratio: 1;
+    }
+    div h2 {
+        padding: 20px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+    
+}
